@@ -1,8 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+      <title>学ぶ対話BOT</title>
     </head>
     <body>
-    <h1>HelloFlask</h1>
+      <div class="wrapper">
+        <header>
+          <h1 class="bot-name">自己学習対話botくん</h1>
+        </header>
+        <main class="main-contents">
+          <div class="form-container">
+            <input type="text" placeholder="メッセージを入力してください">
+            <input type="submit" value="送信">
+          </div>
+        </main>
+      </div>
     </body>
 </html>
