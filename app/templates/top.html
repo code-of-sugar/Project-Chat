@@ -3,6 +3,12 @@
     <head>
       <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
       <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/message.css') }}">
+      <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous"></script>
+      <link rel="">
       <title>学ぶ対話BOT</title>
     </head>
     <body>
@@ -11,11 +17,13 @@
           <h1 class="bot-name">自己学習対話botくん</h1>
         </header>
         <main class="main-contents">
-          <div class="form-container">
-            <input type="text" placeholder="メッセージを入力してください">
-            <input type="submit" value="送信">
-          </div>
         </main>
+        <div class="form-container">
+            <input type="text" placeholder="メッセージを入力してください" id="js-message">
+            <input type="submit" value="送信" id="js-btn">
+        </div>
       </div>
+
+      <script src="/static/js/main.js"></script>
     </body>
 </html>
