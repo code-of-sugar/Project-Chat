@@ -3,7 +3,6 @@ header{
   height:100px;
   background-color: rgb(159, 255, 122);
   box-sizing: border-box;
-  position: fixed;
 }
 
 h1{
@@ -13,8 +12,8 @@ h1{
 
 .main-contents{
   width: 100%;
-  height: calc(100vh - 100px);
-  background-color: rgb(166, 253, 242);
+  height: calc(100vh - 200px);
+  text-align: right;
 }
 
 .form-container{
