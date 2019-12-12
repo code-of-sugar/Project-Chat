@@ -20,15 +20,17 @@ $(function(){
   }
 
   function ajaxGetMessage(userMessage){
-    $.ajax({
-      url: "/",
-      type: 'post',
-      data: JSON.stringify(userMessage),
-      contentType:'application/json',
-      success: function(data){
-        $('.main-contents').append(chatbotMessageBuild(data))
-      }
-    })
+    if(userMessage != ""){
+      $.ajax({
+        url: "/",
+        type: 'post',
+        data: JSON.stringify(userMessage),
+        contentType:'application/json',
+        success: function(data){
+          $('.main-contents').append(chatbotMessageBuild(data))
+        }
+      })
+    }
   }
 
   function sendMyMessage(userMessage){    
@@ -41,10 +43,11 @@ $(function(){
 
   $('#js-btn').on('click',function(){
     var userMessage = $('#js-message').val();
-    $('#js-message').val("") //送信後formの値を初期化する
-    sendMyMessage(userMessage)
-    ajaxGetMessage(userMessage)
-
+    if (userMessage != ""){
+      $('#js-message').val("") //送信後formの値を初期化する
+      sendMyMessage(userMessage)
+      ajaxGetMessage(userMessage)
+    }
   })
   
 })
