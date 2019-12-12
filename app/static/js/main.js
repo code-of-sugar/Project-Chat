@@ -41,7 +41,8 @@ $(function(){
   }
 
 
-  $('#js-btn').on('click',function(){
+  $('#ajax_submit').on('submit',function(e){
+    e.preventDefault();
     var userMessage = $('#js-message').val();
     if (userMessage != ""){
       $('#js-message').val("") //送信後formの値を初期化する
